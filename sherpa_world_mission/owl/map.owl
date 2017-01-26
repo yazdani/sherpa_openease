@@ -236,7 +236,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&knowrob;pathToCadModel"/>
-                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/rock/meshes/rock.dae</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/rock/meshes/rock01.dae</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
 	<rdfs:subClassOf>
@@ -264,7 +264,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&knowrob;pathToCadModel"/>
-                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/hugerock/meshes/hugerock.dae</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/hugerock/meshes/hugerock01.dae</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>   
 	<rdfs:subClassOf>
@@ -321,7 +321,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&knowrob;pathToCadModel"/>
-                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/victim/meshes/victim.dae</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/victim/meshes/victim01.dae</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>  
  	<rdfs:subClassOf>
@@ -377,7 +377,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&knowrob;pathToCadModel"/>
-                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/mountain/meshes/mountain_map.dae</owl:hasValue>
+                <owl:hasValue rdf:datatype="&xsd;string">package://env_mission/models/mountain/meshes/mountain_map01.dae</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>   
 	<rdfs:subClassOf>
@@ -1514,7 +1514,7 @@
 
 <owl:NamedIndividual rdf:about="&knowrob;Transformation_mountain01">
     <rdf:type rdf:resource="&knowrob;Transformation"/>
-    <knowrob:quaternion rdf:datatype="&xsd;string">0.0 0.0 0.0 1.0</knowrob:quaternion>
+    <knowrob:quaternion rdf:datatype="&xsd;string">1.0 0.0 0.0 0.0</knowrob:quaternion>
     <knowrob:translation rdf:datatype="&xsd;string">0.0 0.0 0.0</knowrob:translation>
 </owl:NamedIndividual>
 <owl:NamedIndividual rdf:about="&knowrob;SemanticMapPerceptionmountain01">
@@ -1706,7 +1706,7 @@
 
 <owl:NamedIndividual rdf:about="&knowrob;Transformation_brokepylon01">
     <rdf:type rdf:resource="&knowrob;Transformation"/>
-    <knowrob:quaternion rdf:datatype="&xsd;string">0.0 0.0 0.0 1.0</knowrob:quaternion>
+    <knowrob:quaternion rdf:datatype="&xsd;string">1.0 0.0 0.0 0.0</knowrob:quaternion>
     <knowrob:translation rdf:datatype="&xsd;string">-18.0 -2.0 0.0</knowrob:translation>
 </owl:NamedIndividual>
 
@@ -1728,7 +1728,7 @@
 
 <owl:NamedIndividual rdf:about="&knowrob;Transformation_brokepylon02">
     <rdf:type rdf:resource="&knowrob;Transformation"/>
-    <knowrob:quaternion rdf:datatype="&xsd;string">0.0 0.0 0.0 1.0</knowrob:quaternion>
+    <knowrob:quaternion rdf:datatype="&xsd;string">1.0 0.0 0.0 0.0</knowrob:quaternion>
     <knowrob:translation rdf:datatype="&xsd;string">-9.0 -12.0 0.0</knowrob:translation>
 </owl:NamedIndividual>
 
@@ -1754,7 +1754,7 @@
 
 <owl:NamedIndividual rdf:about="&knowrob;Transformation_house01">
     <rdf:type rdf:resource="&knowrob;Transformation"/>
-    <knowrob:quaternion rdf:datatype="&xsd;string">0.0 0.0 0.0 1.0</knowrob:quaternion>
+    <knowrob:quaternion rdf:datatype="&xsd;string">1.0 0.0 0.0 0.0</knowrob:quaternion>
     <knowrob:translation rdf:datatype="&xsd;string">2.5 28.5 0.0</knowrob:translation>
 </owl:NamedIndividual>
 
@@ -1776,7 +1776,7 @@
 
 <owl:NamedIndividual rdf:about="&knowrob;Transformation_house02">
     <rdf:type rdf:resource="&knowrob;Transformation"/>
-    <knowrob:quaternion rdf:datatype="&xsd;string">0.0 0.0 0.0 1.0</knowrob:quaternion>
+    <knowrob:quaternion rdf:datatype="&xsd;string">1.0 0.0 0.0 0.0</knowrob:quaternion>
     <knowrob:translation rdf:datatype="&xsd;string">-23.0 10.0 0.0</knowrob:translation>
 </owl:NamedIndividual>
 
