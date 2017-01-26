@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "description": "Lorem Ipsum.",
+        "name": "Search and Rescue",
+        "platforms": [
+            "Simulation"
+        ],
+        "projects": [
+            "Sherpa"
+        ],
+        "tags": []
+    },
+    "query": [
+        {
+            "q": "",
+            "text": "----- Search&Rescue Demo -----"
+        },
+        {
+            "q": "register_ros_package(knowrob_map_tools),\n% Episodic memory\nload_experiments('/episodes/Search-And-Rescue-Mission/sim_hmi_0/', 'log.owl'),\n% Environment knowledge\nowl_parse('package://sherpa_world_mission/owl/map.owl'),\nshow('http://knowrob.org/kb/ias_semantic_map.owl#MountainMap', 5.835).",
+            "text": "Load knowledge sources and show semantic map "
+        },
+        {
+            "q": "",
+            "text": ""
+        },
+        {
+            "q": "",
+            "text": "----- Queries on the logged simulation -----"
+        },
+        {
+            "q": "entity(Grasp, [an, action,\n  [type, grasping_something],\n  [object_acted_on, [an, object, [type, container]]],\n  [comp_temporal:temporally_subsumes, [an, event,\n    [type, knowrob_sim:particle_translation]]]]),\noccurs(Grasp, [Begin,End]),\nshow([\n  [agent(sim_hand:'SimulationHand'), End],\n  [sim_map:'SemanticEnvironmentMap_vpdsmf09ewtnv', End],\n  [trajectory('/palm_link'), interval(Begin,End,dt(0.1))]\n]).",
+            "text": "Show the trajectory of the hand at pouring events"
+        },
+        {
+            "q": "entity(Trans, [an, event,\n  [type, knowrob_sim:particle_translation],\n  [particle_type, Stuff]]),\nentity(Grasp, [an, action,\n  [type, grasping_something],\n  [object_acted_on, Obj],\n  [comp_temporal:temporally_subsumes, Trans]]),\nentity(Obj, [an, object,\n  [type, food_utensil]]),\nentity(Touch, [an, event,\n  [knowrob_sim:in_contact, Obj],\n  [knowrob_sim:in_contact, Stuff],\n  [comp_temporal:temporally_subsumes, Trans]]),\nholds(comp_temporal:temporallySubsumes(Grasp,Touch)),\noccurs(Touch, [Begin,End]),\nshow([\n  [agent(sim_hand:'SimulationHand'), End],\n  [sim_map:'SemanticEnvironmentMap_vpdsmf09ewtnv', End],\n  [trajectory('/palm_link'), interval(Begin,End,dt(0.1))]\n]).",
+            "text": "Show the trajectory of the hand at scooping events"
+        },
+        {
+            "q": "entity(Grasp, [an, action,\n  [type, grasping_something]]),\noccurs(Grasp, [Begin,End]),\nshow([\n  [agent(sim_hand:'SimulationHand'), End],\n  [sim_map:'SemanticEnvironmentMap_vpdsmf09ewtnv', End],\n  [trajectory('/palm_link'), interval(Begin,End,dt(0.1))]\n]).",
+            "text": "Show the trajectory of the hand during a grasping event"
+        }
+    ],
+    "time_intervals": [
+        {
+            "end": 43,
+            "start": 6
+        }
+    ],
+    "video": [
+        {
+            "animation": "marker_update(object('http://knowrob.org/kb/simulation_map.owl#SemanticEnvironmentMap_vpdsmf09ewtnv')), \nvisualize_simulation_scene(T), marker_publish.",
+            "end": 43,
+            "initialization": "owl_parse('package://knowrob_srdl/owl/sim-hand.owl'), \nload_experiment('/episodes/Pizza-Making/sim-pizza_0/episode1/log.owl'), \nowl_parse('package://knowrob_sim/owl/simulation_map.owl'), \nmarker_update(object('http://knowrob.org/kb/simulation_map.owl#SemanticEnvironmentMap_vpdsmf09ewtnv')), \nvisualize_simulation_scene(T), marker_publish.",
+            "name": "Simulation of Pizza Preparation",
+            "start": 6,
+            "summary": "true"
+        }
+    ]
+}

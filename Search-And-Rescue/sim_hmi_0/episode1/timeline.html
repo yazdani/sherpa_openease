@@ -1,0 +1,45 @@
+<html>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization',
+       'version':'1','packages':['timeline']}]}"></script>
+<script type="text/javascript">
+google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var container = document.getElementById('sim_timeline_ex');
+
+  var chart = new google.visualization.Timeline(container);
+
+  var dataTable = new google.visualization.DataTable();
+
+  dataTable.addColumn({ type: 'string', id: 'Event' });
+  dataTable.addColumn({ type: 'number', id: 'Start' });
+  dataTable.addColumn({ type: 'number', id: 'End' });
+
+  dataTable.addRows([
+    [ 'Contact-KitchenTable-Cup', 5836, 8818],
+    [ 'Contact-KitchenTable-Cup', 13653, 42503],
+    [ 'Contact-KitchenTable-Hand', 8280, 8387],
+    [ 'Contact-KitchenTable-Spoon', 5836, 16095],
+    [ 'Contact-KitchenTable-Spoon', 41309, 42503],
+    [ 'Contact-Pizza-Champignon', 35335, 42503],
+    [ 'Contact-Pizza-Cheese', 30939, 42503],
+    [ 'Contact-Pizza-Sauce', 11676, 42503],
+    [ 'Contact-Pizza-Spoon', 19351, 19491],
+    [ 'Grasp-Cup', 7857, 13598],
+    [ 'Grasp-Spoon', 15721, 41810],
+    [ 'Main', 5835, 42503],
+    [ 'ParticleTranslation-Champignon', 34096, 34155],
+    [ 'ParticleTranslation-Champignon', 37560, 37593],
+    [ 'ParticleTranslation-Cheese', 28255, 28367],
+    [ 'ParticleTranslation-Sauce', 11548, 11881],
+    [ 'ToolContact-Spoon-Champignon', 33759, 36299],
+    [ 'ToolContact-Spoon-Champignon', 37242, 39915],
+    [ 'ToolContact-Spoon-Cheese', 27457, 32114],
+  ]);
+
+  chart.draw(dataTable);
+}
+</script>
+<div id="sim_timeline_ex" style="width: 1300px; height: 900px;"></div>
+
+</html>
