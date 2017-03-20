@@ -94,9 +94,9 @@
     <!-- =========================================== -->
 
 
-    <!-- &robot;quadrotor_sonar_joint -->
+    <!-- &robot;quadrotor_camera_joint -->
 
-    <owl:NamedIndividual rdf:about="&robot;quadrotor_sonar_joint">
+    <owl:NamedIndividual rdf:about="&robot;quadrotor_camera_joint">
         <rdf:type rdf:resource="&srdl2-comp;FixedUrdfJoint"/>
         <srdl2-comp:urdfName>camera_joint</srdl2-comp:urdfName>
         <srdl2-comp:succeedingLink rdf:resource="&robot;quadrotor_camera_link"/>
