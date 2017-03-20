@@ -48,7 +48,7 @@
     <!-- =========================================== -->
 
 
-    <owl:Class rdf:about="&robot;quadrotor">
+    <owl:Class rdf:about="&knowrob;quadrotor">
         <rdfs:subClassOf rdf:resource="&knowrob;Robot"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -68,7 +68,7 @@
     <!-- =========================================== -->
 
    <owl:NamedIndividual rdf:about="&robot;quadrotor_robot1">
-        <rdf:type rdf:resource="&knowrob;Robot"/>
+        <rdf:type rdf:resource="&knowrob;quadrotor"/>
         <srdl2-comp:subComponent rdf:resource="&robot;quadrotor1_base"/>
     </owl:NamedIndividual>
 
