@@ -77,7 +77,7 @@
         <rdf:type rdf:resource="&knowrob;MobileBase"/>
 
         <srdl2-comp:baseLinkOfComposition rdf:resource="&robot;quadrotor_base_link"/>
-        <srdl2-comp:endLinkOfComposition rdf:resource="&robot;quadrotor_sonar_link"/>
+        <srdl2-comp:endLinkOfComposition rdf:resource="&robot;quadrotor_camera_link"/>
     </owl:NamedIndividual>
 
 
@@ -98,8 +98,8 @@
 
     <owl:NamedIndividual rdf:about="&robot;quadrotor_sonar_joint">
         <rdf:type rdf:resource="&srdl2-comp;FixedUrdfJoint"/>
-        <srdl2-comp:urdfName>sonar_joint</srdl2-comp:urdfName>
-        <srdl2-comp:succeedingLink rdf:resource="&robot;quadrotor_sonar_link"/>
+        <srdl2-comp:urdfName>camera_joint</srdl2-comp:urdfName>
+        <srdl2-comp:succeedingLink rdf:resource="&robot;quadrotor_camera_link"/>
     </owl:NamedIndividual>
 
 
@@ -109,7 +109,7 @@
         <rdf:type rdf:resource="&knowrob;Proprioception"/>
         <knowrob:eventOccursAt rdf:resource="&robot;Transformation_eY4tTlIM"/>
         <knowrob:startTime rdf:resource="&robot;timepoint_0000000001"/>
-        <knowrob:objectActedOn rdf:resource="&robot;quadrotor_sonar_joint"/>
+        <knowrob:objectActedOn rdf:resource="&robot;quadrotor_camera_joint"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&robot;Transformation_eY4tTlIM">
@@ -137,16 +137,16 @@
         <srdl2-comp:inertia_iyy rdf:datatype="&qudt-unit;Kilogram">0.01152</srdl2-comp:inertia_iyy>
         <srdl2-comp:inertia_iyz rdf:datatype="&qudt-unit;Kilogram">0.0</srdl2-comp:inertia_iyz>
         <srdl2-comp:inertia_izz rdf:datatype="&qudt-unit;Kilogram">0.0218</srdl2-comp:inertia_izz>
-        <knowrob:pathToCadModel rdf:datatype="&xsd;string">package://sherpa_cad_models/models/agents/quadrotor_base.dae</knowrob:pathToCadModel>
-        <srdl2-comp:succeedingJoint rdf:resource="&robot;quadrotor_sonar_joint"/>
+        <knowrob:pathToCadModel rdf:datatype="&xsd;string">package://quadrotor_controller/meshes/quadrotor_base.dae</knowrob:pathToCadModel>
+        <srdl2-comp:succeedingJoint rdf:resource="&robot;quadrotor_camera_joint"/>
     </owl:NamedIndividual>
 
 
-    <!-- &robot;quadrotor_sonar_link -->
+    <!-- &robot;quadrotor_camera_link -->
 
-    <owl:NamedIndividual rdf:about="&robot;quadrotor_sonar_link">
+    <owl:NamedIndividual rdf:about="&robot;quadrotor_camera_link">
         <rdf:type rdf:resource="&srdl2-comp;UrdfLink"/>
-        <srdl2-comp:urdfName>sonar_link</srdl2-comp:urdfName>
+        <srdl2-comp:urdfName>camera_link</srdl2-comp:urdfName>
         <srdl2-comp:mass_value rdf:datatype="&qudt-unit;Kilogram">0.001</srdl2-comp:mass_value>
         <srdl2-comp:inertia_ixx rdf:datatype="&qudt-unit;Kilogram">0.000000017</srdl2-comp:inertia_ixx>
         <srdl2-comp:inertia_ixy rdf:datatype="&qudt-unit;Kilogram">0</srdl2-comp:inertia_ixy>
@@ -154,7 +154,7 @@
         <srdl2-comp:inertia_iyy rdf:datatype="&qudt-unit;Kilogram">0.000000017</srdl2-comp:inertia_iyy>
         <srdl2-comp:inertia_iyz rdf:datatype="&qudt-unit;Kilogram">0</srdl2-comp:inertia_iyz>
         <srdl2-comp:inertia_izz rdf:datatype="&qudt-unit;Kilogram">0.000000017</srdl2-comp:inertia_izz>
-        <knowrob:pathToCadModel rdf:datatype="&xsd;string">package://sherpa_cad_models/models/agents/max_sonar_ez4.dae</knowrob:pathToCadModel>
+        <knowrob:pathToCadModel rdf:datatype="&xsd;string">package://quadrotor_controller/meshes/kinect_camera_simple.dae</knowrob:pathToCadModel>
     </owl:NamedIndividual>
 
 
